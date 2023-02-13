@@ -4,124 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Etch A Sketch</title>
 </head>
 
 <body>
-    <div class="canvasWrap">
+    <div class="canvas-wrap">
+      <div class='label-size'>Dot Size: 10</div>
+      <div class="sizes">
+        <button class="size-plus size size-button">+</button>
+        <button class="size-minus size size-button">-</button>
+      </div>
         <canvas width="1600" height="1000" id="etch-a-sketch"></canvas>
         <!-- Canvas html element used for drawing on. Height and width are the actual size of the canvas -->
         <div class="buttons">
-            <button class="sizePlus size">+</button>
-            <button class="sizeMinus size">-</button>
             <button class="shake">Shake</button>
-            <button class="red color">Red</button>
-            <button class="green color">Green</button>
-            <button class="blue color">Blue</button>
-            <button class="purple color">Purple</button>
-            <button class="rainbow color">Rainbow</button>
-            <button class="randomColor color">Random color</button>
+            <button class="red">Red</button>
+            <button class="green">Green</button>
+            <button class="blue">Blue</button>
+            <button class="purple">Purple</button>
+            <button class="rainbow">Rainbow</button>
+            <button class="randomColor">Random color</button>
         </div>
-        <label class='size'>Size: 10</label>
-
+        <div class="instructions">Instructions: Use the arrow keys on your keyboard to draw.</div>
     </div>
     <script src="./etch-a-sketch.js"></script>
-
-    <style>
-        html {
-            font-size: 62.5%;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-
-
-        body {
-            min-height: 100vh;
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            background: url(./sky.jpg);
-            background-size: cover;
-        }
-
-        button {
-            border: 2px solid black;
-            color: white;
-            background: rgb(173, 46, 135);
-            padding: 1rem;
-            font-weight: 600;
-            font-size: 2rem;
-        }
-
-        canvas {
-            border: 30px solid #e80000;
-            border-radius: 10px;
-            /* Set the width and height to half the actual size so it doesn't look pixelated */
-            width: 800px;
-            /*How it will look on screen. Lower than canvas html width/height so it will look good on high res screens */
-            height: 500px;
-            background: white;
-        }
-
-        canvas.shake {
-            animation: shake 0.5s linear 1;
-        }
-
-        .shake {
-            background: goldenrod;
-        }
-
-        .red {
-            background: red;
-        }
-
-        .green {
-            background: green;
-        }
-
-        .blue {
-            background: blue;
-        }
-
-        .purple {
-            background: purple;
-        }
-
-        .randomColor {
-            background: white;
-            color: black;
-        }
-
-        .size {
-            background: rgb(131, 129, 126);
-            color: white;
-        }
-
-
-
-        @keyframes shake {
-
-            10%,
-            90% {
-                transform: translate3d(-1px, 0, 0);
-            }
-
-            20%,
-            80% {
-                transform: translate3d(2px, 0, 0);
-            }
-
-            30%,
-            50%,
-            70% {
-                transform: translate3d(-4px, 0, 0);
-            }
-
-            40%,
-            60% {
-                transform: translate3d(4px, 0, 0);
-            }
-        }
-    </style>
 </body>
 
 </html>
